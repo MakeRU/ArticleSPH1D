@@ -1,0 +1,78 @@
+\documentclass[12pt,a4paper,draft]{article}
+
+\setlength{\textwidth}{170mm} %ширина текста 6in=152mm
+\setlength{\textheight}{255mm}
+\setlength{\oddsidemargin}{5mm} %расстояние между левым краем листа и левым краем
+                                %текста на правой странице минус 1in
+\setlength{\topmargin}{-20mm} %расстояние между верхним краем листа и верхним
+                            %колонтитулом минус 1in
+%\footheight 4mm %высота нижнего колонтитула
+%\footskip 5mm %расстояние между нижним краем текста и нижнем краем
+               %нижнего колонтитула
+
+
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage{srcltx}
+
+\usepackage{amsmath,bm}
+
+\usepackage{mathtext}
+\usepackage[small,centerlast]{caption2}
+\renewcommand{\captionlabeldelim}{.}
+\usepackage{indentfirst}
+\usepackage{amssymb}
+%\usepackage{natbib}
+\usepackage{footnote}
+\usepackage{afterpage}
+\usepackage{cite}
+
+\usepackage[dvips]{graphicx,color}
+%\usepackage{graphicx}
+\graphicspath{{Images/}}
+
+
+
+\title{Моделирование кавитационного разрыва в потоке жидкости методом SPH}
+\author{М.Н. Давыдов}
+\date{Институт гидродинамики им. М.А. Лаврентьева СО РАН, 
+630090 Новосибирск, E-mail: davydov@hydro.nsc.ru}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+Показано, что использование SPH-метода (метод сглаженных гидродинамических частиц)~\cite{Monaghan2005} позволяет провести исследование структуры течения жидкости при кавитационном разрыве и отследить границы возникающих откольных областей. В результате численного анализа развития кавитации при отражении ударной волны от свободной границы, получено распределение концентрации газовой фазы и определены границы возникающих разрывов. Проведено сравнение с результатами полученными обычными численными методами.
+\end{abstract}
+
+\section{Постановка задачи}
+
+\section{Метод конечных разностей}
+
+\section{SPH-метод}
+       
+	Метод гладких (сглаженных) частиц (Smoothed Particle Hydrodynamics - SPH) --- бессеточный лагранжевый численный метод для расчетов процессов интенсивного динамического нагружения тел, в особенности, когда имеет место существенное изменение топологии моделируемых объектов (разлет вещества).
+
+        Интерполяции функции $f$  и ее производной в SPH-методе выглядят следующим образом:
+\[ \langle f(\bar{r}) \rangle = \sum_{i=1}^{N} \frac{m_i}{\rho(\bar{r}_i)}  f(\bar{r_i}) W(\bar{r} -  \bar{r_i},h) \]
+
+\[ \langle \nabla f(\bar{r}) \rangle = \sum_{i=1}^{N} \frac{m_i}{\rho(\bar{r}_i)}  f(\bar{r_i}) \nabla W(\bar{r} -  \bar{r_i},h) \]
+
+    Здесь $W(\bar{r},h)$ --- сглаживающая  функция (ядро), $h$~---  радиус сглаживания.
+
+
+
+\section{Заключение}
+
+%\bibliographystyle{unsrt}
+\bibliographystyle{gost2008}
+\bibliography{d:/Dropbox/BibtexBase/Work}
+
+
+\end{document}
+
